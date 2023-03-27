@@ -10,7 +10,7 @@ public class AppDelegate : UIApplicationDelegate {
 	public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 	{
 		global::Flipper.FlipperProxy.Shared.InitializeProxy();
-		// create a new window instance based on the screen size
+
 		Window = new UIWindow (UIScreen.MainScreen.Bounds);
 
 		// create a UIViewController with a single UILabel

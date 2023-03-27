@@ -19,6 +19,7 @@ public class FlipperProxy : NSObject {
            let  client = FlipperClient.shared()
            let  layoutDescriptorMapper = SKDescriptorMapper(defaults: ())
                 FlipperKitLayoutComponentKitSupport.setUpWith(layoutDescriptorMapper)
+           
             client?.add(FlipperKitLayoutPlugin(rootNode: UIApplication.shared, with: layoutDescriptorMapper!))
                 client?.start()
        }

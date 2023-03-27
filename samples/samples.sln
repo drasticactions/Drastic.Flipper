@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drastic.Flipper.iOS", "Drastic.Flipper.iOS\Drastic.Flipper.iOS.csproj", "{1DFD62A1-18D0-412B-853D-5B9C23ED1EFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drastic.Flipper.MauiSample", "Drastic.Flipper.MauiSample\Drastic.Flipper.MauiSample.csproj", "{3248C588-FDDA-47CD-BF20-DAC59B477EC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{1DFD62A1-18D0-412B-853D-5B9C23ED1EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DFD62A1-18D0-412B-853D-5B9C23ED1EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DFD62A1-18D0-412B-853D-5B9C23ED1EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3248C588-FDDA-47CD-BF20-DAC59B477EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3248C588-FDDA-47CD-BF20-DAC59B477EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3248C588-FDDA-47CD-BF20-DAC59B477EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3248C588-FDDA-47CD-BF20-DAC59B477EC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

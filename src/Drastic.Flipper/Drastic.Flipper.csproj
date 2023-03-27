@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net7.0-ios</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+    <IsPackable>true</IsPackable>
+    <Description>Binding of Flipper for .NET iOS Projects</Description>
+    <Company>Drastic Actions</Company>
+		<Authors>$(Company)</Authors>
+		<Copyright>Copyright (C) Drastic Actions</Copyright>
+		<IsBindingProject>true</IsBindingProject>
+		<IsPackable>true</IsPackable>
+		<PackageTags>ios Flipper</PackageTags>
+		<PackageProjectUrl>https://github.com/drasticactions/Drastic.Flipper</PackageProjectUrl>
+		<PackageReleaseNotes>https://github.com/drasticactions/Drastic.Flipper/blob/main/CHANGELOG.md</PackageReleaseNotes>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>favicon.png</PackageIcon>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<DebugType>embedded</DebugType>
+		<Version>1.0.4</Version>
+		<CompressBindingResourcePackage>true</CompressBindingResourcePackage>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+  </ItemGroup>
+<!--  <ItemGroup>
+    <BundleResource Include="Resources\FluentUIResources-ios.bundle" />
+  </ItemGroup>-->
+  <ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="" Visible="false" />
+		<None Include="$(MSBuildThisFileDirectory)favicon.png" Pack="true" PackagePath="" Visible="false" />
+	</ItemGroup>
+  <ItemGroup>
+		<NativeReference Include="..\Frameworks\Drastic_FlipperKit.xcframework">
+			<Kind>Framework</Kind>
+			<SmartLink>False</SmartLink>
+		</NativeReference>
+	</ItemGroup>
+</Project>

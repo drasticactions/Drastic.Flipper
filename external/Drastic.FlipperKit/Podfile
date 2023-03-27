@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+flipperkit_version = '0.187.0'
+
+target 'Drastic.FlipperKit' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Drastic.FlipperKit
+  # It is likely that you'll only want to include Flipper in debug builds,
+  # in which case you add the `:configuration` directive:
+  pod 'FlipperKit'
+  pod 'FlipperKit/FlipperKitLayoutComponentKitSupport'
+  pod 'FlipperKit/SKIOSNetworkPlugin', '~>' + flipperkit_version
+  pod 'FlipperKit/FlipperKitUserDefaultsPlugin', '~>' + flipperkit_version
+end

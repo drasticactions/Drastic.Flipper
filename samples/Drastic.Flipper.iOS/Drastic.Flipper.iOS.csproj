@@ -13,6 +13,6 @@
     <CreatePackage>false</CreatePackage>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Drastic.Flipper" Version="1.0.4" />
+    <PackageReference Include="Drastic.Flipper" Version="1.0.5" />
   </ItemGroup>
 </Project>

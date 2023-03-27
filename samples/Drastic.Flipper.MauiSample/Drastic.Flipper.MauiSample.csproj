@@ -45,6 +45,6 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 	<ItemGroup  Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
-		<PackageReference Include="Drastic.Flipper" Version="1.0.4" />
+		<PackageReference Include="Drastic.Flipper" Version="1.0.5" />
 	</ItemGroup>
 </Project>

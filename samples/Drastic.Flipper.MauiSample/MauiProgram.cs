@@ -9,7 +9,7 @@ public static class MauiProgram
 #if IOS
         global::Flipper.FlipperProxy.Shared.InitializeProxy();
 #endif
-        var builder = MauiApp.CreateBuilder();
+		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>

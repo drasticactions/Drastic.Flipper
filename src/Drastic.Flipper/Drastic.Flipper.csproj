@@ -41,7 +41,7 @@
 		<None Include="..\..\README.md" Pack="true" PackagePath="" Visible="false" />
 		<None Include="$(MSBuildThisFileDirectory)favicon.png" Pack="true" PackagePath="" Visible="false" />
 	</ItemGroup>
-	<ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
 		<NativeReference Include="..\Frameworks\Drastic_FlipperKit.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>

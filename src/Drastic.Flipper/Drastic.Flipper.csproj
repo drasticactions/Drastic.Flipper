@@ -1,12 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>net7.0-ios</TargetFrameworks>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>true</ImplicitUsings>
-    <IsBindingProject>true</IsBindingProject>
-    <IsPackable>true</IsPackable>
-    <Description>Binding of Flipper for .NET iOS Projects</Description>
-    <Company>Drastic Actions</Company>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net7.0-android</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('osx'))">$(TargetFrameworks);net7.0-ios</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>true</ImplicitUsings>
+		<IsBindingProject>true</IsBindingProject>
+		<IsPackable>true</IsPackable>
+		<Description>Binding of Flipper for .NET iOS and android Projects</Description>
+		<Company>Drastic Actions</Company>
 		<Authors>$(Company)</Authors>
 		<Copyright>Copyright (C) Drastic Actions</Copyright>
 		<IsBindingProject>true</IsBindingProject>
@@ -21,22 +22,26 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<DebugType>embedded</DebugType>
-		<Version>1.0.5</Version>
+		<Version>1.0.6</Version>
 		<CompressBindingResourcePackage>true</CompressBindingResourcePackage>
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
-  </ItemGroup>
-<!--  <ItemGroup>
-    <BundleResource Include="Resources\FluentUIResources-ios.bundle" />
-  </ItemGroup>-->
-  <ItemGroup>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
+		<ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Jars\annotation-0.10.5.jar" />
+	  <None Remove="Jars\fbjni-0.3.0.aar" />
+	  <None Remove="Jars\Java-WebSocket-1.5.3.jar" />
+	  <None Remove="Jars\nativeloader-0.10.5.jar" />
+	  <None Remove="Jars\slf4j-api-2.0.7.jar" />
+	  <None Remove="Jars\soloader-0.10.5.aar" />
+	</ItemGroup>
+	<ItemGroup>
 		<None Include="..\..\README.md" Pack="true" PackagePath="" Visible="false" />
 		<None Include="$(MSBuildThisFileDirectory)favicon.png" Pack="true" PackagePath="" Visible="false" />
 	</ItemGroup>
-  <ItemGroup>
+	<ItemGroup>
 		<NativeReference Include="..\Frameworks\Drastic_FlipperKit.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>

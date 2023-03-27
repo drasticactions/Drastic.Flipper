@@ -1,0 +1,7 @@
+﻿<metadata>
+	<!--<remove-node path="/api/package[contains(@name, 'com.facebook.flipper.plugins')]" />-->
+	<remove-node path="/api/package[contains(@name, 'com.facebook.flipper.plugins.inspector.descriptors')]" />
+	<remove-node path="/api/package[contains(@name, 'com.facebook.flipper.plugins.databases')]" />
+	<remove-node path="/api/package[contains(@name, 'com.facebook.flipper.plugins.uidebugger')]" />
+	<remove-node path="/api/package[contains(@name, 'org.java_websocket')]" />
+</metadata>

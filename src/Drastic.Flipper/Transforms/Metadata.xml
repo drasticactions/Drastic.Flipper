@@ -4,4 +4,7 @@
 	<remove-node path="/api/package[contains(@name, 'com.facebook.flipper.plugins.databases')]" />
 	<remove-node path="/api/package[contains(@name, 'com.facebook.flipper.plugins.uidebugger')]" />
 	<remove-node path="/api/package[contains(@name, 'org.java_websocket')]" />
+	<remove-node path="/api/package[@name='leakcanary']/interface[@name='OnHeapAnalyzedListener']" />
+	<remove-node path="/api/package[@name='leakcanary']/class[@name='DefaultOnHeapAnalyzedListener']" />
+	<remove-node path="/api/package[@name='shark']/class[@name='HeapObject']" />
 </metadata>

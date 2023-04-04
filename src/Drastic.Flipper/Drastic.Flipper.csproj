@@ -22,20 +22,12 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<DebugType>embedded</DebugType>
-		<Version>1.0.6</Version>
+		<Version>1.0.7</Version>
 		<CompressBindingResourcePackage>true</CompressBindingResourcePackage>
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
 		<ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
-	</ItemGroup>
-	<ItemGroup>
-	  <None Remove="Jars\annotation-0.10.5.jar" />
-	  <None Remove="Jars\fbjni-0.3.0.aar" />
-	  <None Remove="Jars\Java-WebSocket-1.5.3.jar" />
-	  <None Remove="Jars\nativeloader-0.10.5.jar" />
-	  <None Remove="Jars\slf4j-api-2.0.7.jar" />
-	  <None Remove="Jars\soloader-0.10.5.aar" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\..\README.md" Pack="true" PackagePath="" Visible="false" />
